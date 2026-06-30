@@ -1,0 +1,31 @@
+Round,Accuracy,Event,Recovery_Latency_ms,Active_Clients,Quarantined
+1,0.3505,New Best Model,0.0,10,None
+2,0.4374,New Best Model,0.0,10,None
+3,0.4793,New Best Model,0.0,10,None
+4,0.5019,New Best Model,0.0,10,None
+5,0.5391,New Best Model,0.0,10,None
+6,0.4144,Poisoning Detected + Quarantine,2673.44,10,4 quarantined
+7,0.55,🔄 Recovered (New Best),0.0,6,4 quarantined
+8,0.5722,🔄 Recovered (New Best),0.0,6,4 quarantined
+9,0.577,🔄 Recovered (New Best),0.0,6,4 quarantined
+10,0.5812,🔄 Recovered (New Best),0.0,6,4 quarantined
+11,0.5875,🔄 Recovered (New Best),0.0,6,4 quarantined
+12,0.5982,🔄 Recovered (New Best),0.0,6,4 quarantined
+13,0.6031,🔄 Recovered (New Best),0.0,6,4 quarantined
+14,0.5979,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+15,0.6001,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+16,0.6001,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+17,0.601,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+18,0.6036,🔄 Recovered (New Best),0.0,6,4 quarantined
+19,0.5957,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+20,0.6015,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+21,0.6017,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+22,0.5989,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+23,0.5926,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+24,0.5984,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+25,0.5974,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+26,0.5994,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+27,0.5927,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+28,0.5928,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+29,0.5891,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined
+30,0.5894,🔄 Post-Quarantine Recovery,0.0,6,4 quarantined

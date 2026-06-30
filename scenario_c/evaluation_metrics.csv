@@ -1,0 +1,31 @@
+Round,Accuracy,Event,Recovery_Latency_ms
+1,0.2629,New Best Model,0.0
+2,0.3663,New Best Model,0.0
+3,0.4396,New Best Model,0.0
+4,0.4825,New Best Model,0.0
+5,0.5071,New Best Model,0.0
+6,0.4021,Poisoning Detected & Rollback,5431.14
+7,0.1669,Poisoning Detected & Rollback,5293.41
+8,0.161,Poisoning Detected & Rollback,5372.5
+9,0.0965,Poisoning Detected & Rollback,5332.63
+10,0.1,Poisoning Detected & Rollback,5307.47
+11,0.1,Poisoning Detected & Rollback,5330.99
+12,0.1,Poisoning Detected & Rollback,5321.82
+13,0.1,Poisoning Detected & Rollback,5307.61
+14,0.1,Poisoning Detected & Rollback,5235.54
+15,0.1,Poisoning Detected & Rollback,5323.07
+16,0.1,Poisoning Detected & Rollback,5302.7
+17,0.1,Poisoning Detected & Rollback,5418.24
+18,0.1,Poisoning Detected & Rollback,5315.45
+19,0.1,Poisoning Detected & Rollback,5289.83
+20,0.1,Poisoning Detected & Rollback,5281.93
+21,0.1,Poisoning Detected & Rollback,5405.02
+22,0.1,Poisoning Detected & Rollback,5306.6
+23,0.1,Poisoning Detected & Rollback,5294.6
+24,0.1,Poisoning Detected & Rollback,5317.39
+25,0.1,Poisoning Detected & Rollback,5309.25
+26,0.1,Poisoning Detected & Rollback,5309.75
+27,0.1,Poisoning Detected & Rollback,5268.98
+28,0.1,Poisoning Detected & Rollback,5328.82
+29,0.1,Poisoning Detected & Rollback,5316.85
+30,0.1,Poisoning Detected & Rollback,5327.6

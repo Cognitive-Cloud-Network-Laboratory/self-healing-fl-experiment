@@ -1,0 +1,80 @@
+[
+    {
+        "round": 1,
+        "accuracy": 0.3505,
+        "model_hash": "3943029f85a5c75aa0f64a7c0de85059dfc6776ba50fa2126fe0db667b44d244",
+        "file_path": "./scenario_d/global_model_round_1.pth"
+    },
+    {
+        "round": 2,
+        "accuracy": 0.4374,
+        "model_hash": "7a2d4c2bcea21732a49a2d2142c241c2f46df6876e0005b57b7f6779f4f434e3",
+        "file_path": "./scenario_d/global_model_round_2.pth"
+    },
+    {
+        "round": 3,
+        "accuracy": 0.4793,
+        "model_hash": "7a2e729032af0648d52f4f3b38d2bcfddcab9f9255e3e48a044e76bcb868ad21",
+        "file_path": "./scenario_d/global_model_round_3.pth"
+    },
+    {
+        "round": 4,
+        "accuracy": 0.5019,
+        "model_hash": "98dc96c87fe7f64024c6f44c8842913b0665030cfd64d740334e5ce3f782a3d0",
+        "file_path": "./scenario_d/global_model_round_4.pth"
+    },
+    {
+        "round": 5,
+        "accuracy": 0.5391,
+        "model_hash": "16b465857ddd5fe4a5405d3330d214b061f9c2deebad141cd0864adbdc81ca2b",
+        "file_path": "./scenario_d/global_model_round_5.pth"
+    },
+    {
+        "round": 7,
+        "accuracy": 0.55,
+        "model_hash": "923f6148717814dd271b66f1e5c8b815266b20d2fd348f556c22d6c949b3c1e8",
+        "file_path": "./scenario_d/global_model_round_7.pth"
+    },
+    {
+        "round": 8,
+        "accuracy": 0.5722,
+        "model_hash": "b82c2c502eefe3b7beb72293c3237c3bd332485fd004c01125bdcf7f52995558",
+        "file_path": "./scenario_d/global_model_round_8.pth"
+    },
+    {
+        "round": 9,
+        "accuracy": 0.577,
+        "model_hash": "d1e6b46969d5176bd579cd8ffed0c71db45053e04d8cf9741483020f9f6e2e41",
+        "file_path": "./scenario_d/global_model_round_9.pth"
+    },
+    {
+        "round": 10,
+        "accuracy": 0.5812,
+        "model_hash": "6174ace085ff98c13ed742af50cdeafa1c71d034bc60ed6a8c98452920464143",
+        "file_path": "./scenario_d/global_model_round_10.pth"
+    },
+    {
+        "round": 11,
+        "accuracy": 0.5875,
+        "model_hash": "bc099d3a54019f0e23f8ca8cebd3b9eb8b2ae9bc17ad799785981935760466a8",
+        "file_path": "./scenario_d/global_model_round_11.pth"
+    },
+    {
+        "round": 12,
+        "accuracy": 0.5982,
+        "model_hash": "d2cb9a47acc0c49d09d78f3057c28e56c6fcc5ca8d18ff0179ff82808e8664b8",
+        "file_path": "./scenario_d/global_model_round_12.pth"
+    },
+    {
+        "round": 13,
+        "accuracy": 0.6031,
+        "model_hash": "a4eb9c44450469dd3904af15b33ac27aa51ab08a8df065a3ea796143a5ee2274",
+        "file_path": "./scenario_d/global_model_round_13.pth"
+    },
+    {
+        "round": 18,
+        "accuracy": 0.6036,
+        "model_hash": "fa4abeffef626031a9d3dd31afa140fc47f43cd8ac237d21783c7af5cbf180aa",
+        "file_path": "./scenario_d/global_model_round_18.pth"
+    }
+]

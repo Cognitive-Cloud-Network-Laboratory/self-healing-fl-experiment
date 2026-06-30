@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pth
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Data (CIFAR-10 is downloadable)
+data/
+*.tar.gz
+
+# PyTorch model snapshots (too many)
+scenario_a/global_model_round_*.pth
+scenario_b/global_model_round_*.pth
+scenario_c/global_model_round_*.pth
+scenario_d/global_model_round_*.pth
+global_model_round_*.pth
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+/tmp/
+
+# Hermes
+~/.hermes/

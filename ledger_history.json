@@ -1,0 +1,32 @@
+[
+    {
+        "round": 1,
+        "accuracy": 0.2591,
+        "model_hash": "692b2ec096be11d05235c89ad14e9366095285f83b886693d99c0b19e68cd2a4",
+        "file_path": "global_model_round_1.pth"
+    },
+    {
+        "round": 2,
+        "accuracy": 0.355,
+        "model_hash": "ea046a0751579fb8e7878a398f7eb9198d10fdf3548d5daec0263c385aac5d2d",
+        "file_path": "global_model_round_2.pth"
+    },
+    {
+        "round": 3,
+        "accuracy": 0.4263,
+        "model_hash": "d70daced7c6f6386812418341fc0a4945945a8782aaed36155b47e5211060866",
+        "file_path": "global_model_round_3.pth"
+    },
+    {
+        "round": 4,
+        "accuracy": 0.4817,
+        "model_hash": "84e57961e6f99fbc571c6eea14b25eb1c97c20bc94d2904d5645851525349cfc",
+        "file_path": "global_model_round_4.pth"
+    },
+    {
+        "round": 5,
+        "accuracy": 0.5139,
+        "model_hash": "9e494e5e2289d0fe6d4f06866bb47d9d7fc09aa2091fa2019eb945707d149849",
+        "file_path": "global_model_round_5.pth"
+    }
+]

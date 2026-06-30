@@ -1,0 +1,31 @@
+Round,Accuracy,Event,Recovery_Latency_ms
+1,0.3505,New Best Model,0.0
+2,0.4374,New Best Model,0.0
+3,0.4793,New Best Model,0.0
+4,0.5019,New Best Model,0.0
+5,0.5391,New Best Model,0.0
+6,0.5536,New Best Model,0.0
+7,0.5685,New Best Model,0.0
+8,0.5811,New Best Model,0.0
+9,0.5965,New Best Model,0.0
+10,0.6024,New Best Model,0.0
+11,0.6087,New Best Model,0.0
+12,0.6155,New Best Model,0.0
+13,0.6181,New Best Model,0.0
+14,0.6182,New Best Model,0.0
+15,0.6297,New Best Model,0.0
+16,0.628,Normal,0.0
+17,0.6329,New Best Model,0.0
+18,0.63,Normal,0.0
+19,0.6291,Normal,0.0
+20,0.6276,Normal,0.0
+21,0.628,Normal,0.0
+22,0.6305,Normal,0.0
+23,0.6309,Normal,0.0
+24,0.6263,Normal,0.0
+25,0.632,Normal,0.0
+26,0.6299,Normal,0.0
+27,0.6268,Normal,0.0
+28,0.6286,Normal,0.0
+29,0.6278,Normal,0.0
+30,0.6277,Normal,0.0
