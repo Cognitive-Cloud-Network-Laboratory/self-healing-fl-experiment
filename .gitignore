@@ -18,11 +18,9 @@ data/
 *.tar.gz
 
 # PyTorch model snapshots (too many)
-scenario_a/global_model_round_*.pth
-scenario_b/global_model_round_*.pth
-scenario_c/global_model_round_*.pth
-scenario_d/global_model_round_*.pth
-global_model_round_*.pth
+models/*.pth
+results/**/global_model_round_*.pth
+results/**/noniid_*.pth
 
 # OS
 .DS_Store
@@ -40,3 +38,9 @@ Thumbs.db
 
 # Hermes
 ~/.hermes/
+
+# Paper build artifacts
+papers/*.aux
+papers/*.log
+papers/*.out
+papers/*.docx

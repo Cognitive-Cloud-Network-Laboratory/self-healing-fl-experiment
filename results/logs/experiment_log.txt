@@ -1,0 +1,65 @@
+🔧 Device: cpu
+⏱ PyTorch threads: 4
+📦 Mode: fast, samples/client=2000
+📥 Loading CIFAR-10...
+✅ Train=50000 Test=10000
+
+████████████████████████████████████████████████████████████
+███ EXPERIMENT 1: Non-IID (Dirichlet α=0.5)
+████████████████████████████████████████████████████████████
+============================================================
+🏥 NON-IID: Clean Baseline (α=0.5, 10 Benign)
+============================================================
+  Round  1/30 | Acc=0.1554 | New Best Model
+  Round  2/30 | Acc=0.1637 | New Best Model
+  Round  3/30 | Acc=0.2194 | New Best Model
+  Round  4/30 | Acc=0.2356 | New Best Model
+  Round  5/30 | Acc=0.2456 | New Best Model
+  Round  6/30 | Acc=0.2538 | New Best Model
+  Round  7/30 | Acc=0.2592 | New Best Model
+  Round  8/30 | Acc=0.2692 | New Best Model
+  Round  9/30 | Acc=0.2673 | Normal
+  Round 10/30 | Acc=0.2808 | New Best Model
+  Round 11/30 | Acc=0.2866 | New Best Model
+  Round 12/30 | Acc=0.3004 | New Best Model
+  Round 13/30 | Acc=0.3026 | New Best Model
+  Round 14/30 | Acc=0.3040 | New Best Model
+  Round 15/30 | Acc=0.3113 | New Best Model
+  Round 16/30 | Acc=0.3160 | New Best Model
+  Round 17/30 | Acc=0.3295 | New Best Model
+  Round 18/30 | Acc=0.3342 | New Best Model
+  Round 19/30 | Acc=0.3363 | New Best Model
+  Round 20/30 | Acc=0.3373 | New Best Model
+  Round 21/30 | Acc=0.3427 | New Best Model
+  Round 22/30 | Acc=0.3483 | New Best Model
+  Round 23/30 | Acc=0.3481 | Normal
+  Round 24/30 | Acc=0.3613 | New Best Model
+  Round 25/30 | Acc=0.3576 | Normal
+  Round 26/30 | Acc=0.3573 | Normal
+  Round 27/30 | Acc=0.3614 | New Best Model
+  Round 28/30 | Acc=0.3533 | Normal
+  Round 29/30 | Acc=0.3772 | New Best Model
+  Round 30/30 | Acc=0.3602 | Normal
+✅ NonIID Clean done. Best=0.3772 Final=0.3602
+
+======================================================================
+🛡️ NON-IID: Full Self-Healing + Quarantine (α=0.5)
+======================================================================
+  Round  1/30 | Acc=0.1259 | Best=0.1259 | New Best Model
+  Round  2/30 | Acc=0.1696 | Best=0.1696 | New Best Model
+  Round  3/30 | Acc=0.2089 | Best=0.2089 | New Best Model
+  Round  4/30 | Acc=0.2318 | Best=0.2318 | New Best Model
+  Round  5/30 | Acc=0.2400 | Best=0.2400 | New Best Model
+  Round  6/30 | Acc=0.1416 | Best=0.2400 | Normal
+    🛡️ Rollback+Quarantine @ R7: 0.1000 (lat=2868.7ms)
+  Round  7/30 | Acc=0.1000 | Best=0.2400 | Poisoning Detected + Quarantine
+  Round  8/30 | Acc=0.0997 | Best=0.2400 | Post-Quarantine Recovery
+  Round  9/30 | Acc=0.1406 | Best=0.2400 | Post-Quarantine Recovery
+  Round 10/30 | Acc=0.1538 | Best=0.2400 | Post-Quarantine Recovery
+  Round 11/30 | Acc=0.1694 | Best=0.2400 | Post-Quarantine Recovery
+  Round 12/30 | Acc=0.2025 | Best=0.2400 | Post-Quarantine Recovery
+  Round 13/30 | Acc=0.1987 | Best=0.2400 | Post-Quarantine Recovery
+  Round 14/30 | Acc=0.2060 | Best=0.2400 | Post-Quarantine Recovery
+  Round 15/30 | Acc=0.2010 | Best=0.2400 | Post-Quarantine Recovery
+  Round 16/30 | Acc=0.2173 | Best=0.2400 | Post-Quarantine Recovery
+  Round 17/30 | Acc=0.2214 | Best=0.2400 | Post-Quarantine Recovery

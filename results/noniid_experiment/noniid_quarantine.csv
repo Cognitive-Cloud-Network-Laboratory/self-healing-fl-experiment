@@ -1,0 +1,18 @@
+Round,Accuracy,Event,Recovery_Latency_ms,Active_Clients,Quarantined
+1,0.1259,New Best Model,0.0,10,None
+2,0.1696,New Best Model,0.0,10,None
+3,0.2089,New Best Model,0.0,10,None
+4,0.2318,New Best Model,0.0,10,None
+5,0.24,New Best Model,0.0,10,None
+6,0.1416,Normal,0.0,10,None
+7,0.1,Poisoning Detected + Quarantine,2868.74,10,4 quarantined
+8,0.0997,Post-Quarantine Recovery,0.0,6,4 quarantined
+9,0.1406,Post-Quarantine Recovery,0.0,6,4 quarantined
+10,0.1538,Post-Quarantine Recovery,0.0,6,4 quarantined
+11,0.1694,Post-Quarantine Recovery,0.0,6,4 quarantined
+12,0.2025,Post-Quarantine Recovery,0.0,6,4 quarantined
+13,0.1987,Post-Quarantine Recovery,0.0,6,4 quarantined
+14,0.206,Post-Quarantine Recovery,0.0,6,4 quarantined
+15,0.201,Post-Quarantine Recovery,0.0,6,4 quarantined
+16,0.2173,Post-Quarantine Recovery,0.0,6,4 quarantined
+17,0.2214,Post-Quarantine Recovery,0.0,6,4 quarantined
