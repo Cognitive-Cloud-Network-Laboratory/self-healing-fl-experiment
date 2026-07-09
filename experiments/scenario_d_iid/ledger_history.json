@@ -1,0 +1,32 @@
+[
+    {
+        "round": 1,
+        "accuracy": 0.3158,
+        "model_hash": "1445aa74402541f3792fd080ba52f532605b8c26d50c0e24dd9a5999dc946bb9",
+        "file_path": "./scenario_d_iid/global_model_round_1.pth"
+    },
+    {
+        "round": 2,
+        "accuracy": 0.4222,
+        "model_hash": "6d9742d2e2d5ae7f2deafdd82b37349f409de9907a08245e934e7d7736bb9d04",
+        "file_path": "./scenario_d_iid/global_model_round_2.pth"
+    },
+    {
+        "round": 3,
+        "accuracy": 0.4605,
+        "model_hash": "22d7b74e2398f3828735f463f3f8aa5810000696d12f089e06811820efba1989",
+        "file_path": "./scenario_d_iid/global_model_round_3.pth"
+    },
+    {
+        "round": 4,
+        "accuracy": 0.497,
+        "model_hash": "bbf59a687654f38b6226eef99acb7498b2249df4fa522c56ddc28a62c9d5529e",
+        "file_path": "./scenario_d_iid/global_model_round_4.pth"
+    },
+    {
+        "round": 5,
+        "accuracy": 0.5307,
+        "model_hash": "cc4104372de6eb24b7d49b7f570d14452d7cdc57ed9ed480941e3bcbbcc55ddf",
+        "file_path": "./scenario_d_iid/global_model_round_5.pth"
+    }
+]

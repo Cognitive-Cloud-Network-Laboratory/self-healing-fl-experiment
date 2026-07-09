@@ -25,7 +25,7 @@ plt.rcParams.update({
     'grid.linestyle': '--',
 })
 
-OUT = '/root/ieee-paper/figures'
+OUT = '/jupyter_workspace/org-rbru/self-healing-fl-experiment/papers/figures'
 os.makedirs(OUT, exist_ok=True)
 
 # ========== EXPERIMENTAL DATA ==========
@@ -64,36 +64,39 @@ fig, ax = plt.subplots(figsize=(7.0, 2.6))
 
 c_clean = '#2E86AB'
 c_attack = '#E74C3C'
-c_roll = '#F39C12'
-c_quar = '#27AE60'
+c_roll = '#27AE60'
+c_quar = '#F39C12'
 
-ax.plot(rounds, clean_acc, '-', color=c_clean, label='A: Clean Baseline', linewidth=1.8)
-ax.plot(rounds, attack_acc, '-', color=c_attack, label='B: Vanilla Attack (No Defense)', linewidth=1.8)
+ax.plot(rounds, clean_acc, '-.', color=c_clean, label='A: Clean Baseline', linewidth=1.8)
+ax.plot(rounds, attack_acc, ':', color=c_attack, label='B: Vanilla Attack (No Defense)', linewidth=2.0)
 ax.plot(rounds, rollback_acc, '--', color=c_roll, label='C: Rollback Only', linewidth=1.8, dashes=(5,2))
 ax.plot(rounds, quarantine_acc, '-', color=c_quar, label='D: Rollback + Quarantine', linewidth=2.2)
 
-# Attack activation marker
-ax.axvline(x=5.5, color='gray', linestyle=':', alpha=0.7, linewidth=1)
-ax.text(5.5, 3, 'Attack\nstarts', fontsize=7, rotation=0, ha='center', va='bottom', color='gray')
+# Attack activation marker — thicker, clearer
+ax.axvline(x=6, color='#555555', linestyle='--', alpha=0.4, linewidth=1.5)
+ax.text(6.2, 2, 'Attack starts', fontsize=7.5, fontweight='bold',
+        rotation=0, ha='left', va='bottom', color='#555555')
 
-# Annotations
-ax.annotate(f'Best: 63.29%', xy=(17, 63.29), xytext=(22, 65),
-            fontsize=7, color=c_clean, ha='center',
-            arrowprops=dict(arrowstyle='->', color=c_clean, lw=0.8))
-ax.annotate(f'Best: 60.36%', xy=(13, 60.31), xytext=(18, 56),
-            fontsize=7, color=c_quar, ha='center',
-            arrowprops=dict(arrowstyle='->', color=c_quar, lw=0.8))
-ax.annotate('Stuck at 10%\n(random guess)', xy=(20, 10), xytext=(24, 18),
-            fontsize=7, color=c_attack, ha='center',
-            arrowprops=dict(arrowstyle='->', color=c_attack, lw=0.8))
+# Annotations — black arrows, positioned above lines
+ax.annotate(f'Best: 63.29%', xy=(17, 63.29), xytext=(17, 68),
+            fontsize=7, color='black', ha='center', fontweight='bold',
+            arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
+ax.annotate(f'Best: 60.36%', xy=(18, 60.36), xytext=(18, 55),
+            fontsize=7, color='black', ha='center', fontweight='bold',
+            arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
+ax.annotate('Stuck at 10%\n(random guess)', xy=(20, 10), xytext=(20, 18),
+            fontsize=7, color='black', ha='center', fontweight='bold',
+            arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
 
 ax.set_xlabel('Federated Learning Round')
 ax.set_ylabel('Test Accuracy (%)')
-ax.set_xlim(1, 30)
-ax.set_ylim(0, 70)
+ax.set_xlim(left=1, right=30)
+ax.set_ylim(0, 72)
 ax.xaxis.set_major_locator(mticker.MultipleLocator(5))
 ax.yaxis.set_major_locator(mticker.MultipleLocator(10))
-ax.legend(loc='lower right', framealpha=0.9, edgecolor='gray', fontsize=7.5)
+# Explicit ticks: 1 (edge) → 5,6 (attack) → 10,15,20,25,30 (edge)
+ax.set_xticks([1, 5, 6, 10, 15, 20, 25, 30])
+ax.legend(loc='center right', bbox_to_anchor=(0.98, 0.55), frameon=False, fontsize=7.5)
 
 plt.tight_layout(pad=0.5)
 fig.savefig(f'{OUT}/fig1_four_scenarios.png', dpi=300, bbox_inches='tight')
@@ -136,26 +139,18 @@ print(f"[OK] Fig 2: Clean vs Quarantine")
 # ========== FIG 3: Rollback loop illustration (Scenario C) ==========
 fig3, ax3 = plt.subplots(figsize=(7.0, 2.2))
 
-ax3.plot(rounds[4:12], rollback_acc[4:12], '-o', color=c_roll, linewidth=2.0, markersize=6)
-ax3.plot(rounds[4], rollback_acc[4], 'o', color='green', markersize=10, label='Last Safe State')
-ax3.plot(rounds[5], rollback_acc[5], 'o', color='red', markersize=10, label='Detection + Rollback')
-ax3.plot(rounds[6:12], rollback_acc[6:12], 'o', color=c_roll, markersize=6, label='Rollback Loop')
-
-# Arrows showing the loop
-for i in range(5, 10, 2):
-    ax3.annotate('', xy=(i+1, rollback_acc[i+1]), xytext=(i, rollback_acc[i]),
-                arrowprops=dict(arrowstyle='->', color='red', lw=1.5, connectionstyle='arc3,rad=0.3'))
+# Connecting line without markers
+ax3.plot(rounds[4:12], rollback_acc[4:12], '-', color=c_roll, linewidth=2.0)
+# Markers: same size, 3 shapes, original colors
+ax3.plot(rounds[4], rollback_acc[4], 'o', color='green', markersize=9, label='Last Safe State')
+ax3.plot(rounds[5], rollback_acc[5], '^', color='red', markersize=9, label='Detection + Rollback')
+ax3.plot(rounds[6:12], rollback_acc[6:12], 's', color=c_roll, markersize=9, label='Rollback Loop')
 
 ax3.set_xlabel('Round')
 ax3.set_ylabel('Accuracy (%)')
-ax3.set_title('Rollback Loop: Detection Works, Recovery Fails', fontsize=10, pad=6)
 ax3.set_xlim(4.5, 11.5)
 ax3.set_ylim(5, 60)
-ax3.legend(loc='upper right', fontsize=7.5)
-
-ax3.text(8, 12, '25 rollback events\nacross 30 rounds\n0% recovery', 
-         fontsize=8, ha='center', va='center',
-         bbox=dict(boxstyle='round,pad=0.5', facecolor='salmon', alpha=0.3))
+ax3.legend(loc='upper right', fontsize=7.5, frameon=False)
 
 plt.tight_layout(pad=0.5)
 fig3.savefig(f'{OUT}/fig3_rollback_loop.png', dpi=300, bbox_inches='tight')
