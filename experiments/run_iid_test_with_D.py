@@ -665,7 +665,7 @@ def plot_all(csv_paths: dict, out_path: str):
         'A': 'A: Clean FL',
         'B': 'B: Vanilla (Attack, No Rollback)',
         'C': 'C: Self-Healing (Rollback only)',
-        'D': 'D: Quarantine Protocol',
+        'D': 'D: Rollback + Quarantine',
     }
 
     all_data = {}
@@ -683,31 +683,38 @@ def plot_all(csv_paths: dict, out_path: str):
                 markersize=5, linestyle=linestyles[sc], linewidth=2,
                 label=labels[sc])
 
-    # Key event annotations
+
+    # Arrow: A's Best accuracy
     for sc, (rounds, accs, events) in all_data.items():
-        for r, a, ev in zip(rounds, accs, events):
-            if ev == 'Critical Accuracy Drop' and sc == 'B':
-                ax.annotate(f'Attack → Crash\n{a:.1%}',
-                            xy=(r, a), fontsize=8, color=colors[sc],
-                            xytext=(r + 2, a - 0.06),
-                            arrowprops=dict(arrowstyle='->', color=colors[sc], lw=1.2))
-            elif 'Rollback' in ev and sc == 'C':
-                ax.annotate(f'Rollback\n{a:.1%}',
-                            xy=(r, a), fontsize=8, color=colors[sc],
-                            xytext=(r + 1.5, a + 0.05),
-                            arrowprops=dict(arrowstyle='->', color=colors[sc], lw=1.2))
-            elif 'Quarantine' in ev and sc == 'D' and 'Rollback' in ev:
-                ax.annotate(f'Rollback+\nQuarantine\n{a:.1%}',
-                            xy=(r, a), fontsize=8, color=colors[sc],
-                            xytext=(r + 1.5, a - 0.08),
-                            arrowprops=dict(arrowstyle='->', color=colors[sc], lw=1.2))
+        if sc == 'A':
+            best_idx = max(range(len(accs)), key=lambda i: accs[i])
+            r_best = rounds[best_idx]
+            a_best = accs[best_idx] * 100
+            ax.annotate(f'Best: {a_best:.2f}%', xy=(r_best, accs[best_idx]),
+                        xytext=(r_best, 0.69), fontsize=10, color='black',
+                        ha='center', fontweight='bold',
+                        arrowprops=dict(arrowstyle='->', color='black', lw=1.2))
+            break
+
+    # Arrow: D at Round 27
+    for sc, (rounds, accs, events) in all_data.items():
+        if sc == 'D':
+            for r, a in zip(rounds, accs):
+                if r == 27:
+                    a_pct = a * 100
+                    ax.annotate(f'{a_pct:.2f}%', xy=(r, a),
+                                xytext=(r, 0.50), fontsize=10, color='black',
+                                ha='center', fontweight='bold',
+                                arrowprops=dict(arrowstyle='->', color='black', lw=1.2))
+                    break
+            break
 
     ax.set_xlabel('Communication Round', fontsize=12)
     ax.set_ylabel('Test Accuracy', fontsize=12)
     ax.set_xlim(0.5, max(max(r for r, _, _ in all_data.values())) + 0.5)
-    ax.set_ylim(0.0, 0.65)
+    ax.set_ylim(0.0, 0.72)
     ax.xaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-    ax.legend(frameon=False, fontsize=10)
+    ax.legend(loc='lower left', frameon=False, fontsize=10)
     ax.grid(True, alpha=0.3)
 
     plt.tight_layout()

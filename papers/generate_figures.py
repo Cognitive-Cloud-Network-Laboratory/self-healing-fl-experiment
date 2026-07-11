@@ -70,22 +70,19 @@ c_quar = '#F39C12'
 ax.plot(rounds, clean_acc, '-.', color=c_clean, label='A: Clean Baseline', linewidth=1.8)
 ax.plot(rounds, attack_acc, ':', color=c_attack, label='B: Vanilla Attack (No Defense)', linewidth=2.0)
 ax.plot(rounds, rollback_acc, '--', color=c_roll, label='C: Rollback Only', linewidth=1.8, dashes=(5,2))
-ax.plot(rounds, quarantine_acc, '-', color=c_quar, label='D: Rollback + Quarantine', linewidth=2.2)
+ax.plot(rounds, quarantine_acc, '-', color=c_quar, label='D: Full Quarantine', linewidth=2.2)
 
 # Attack activation marker — thicker, clearer
 ax.axvline(x=6, color='#555555', linestyle='--', alpha=0.4, linewidth=1.5)
 ax.text(6.2, 2, 'Attack starts', fontsize=7.5, fontweight='bold',
         rotation=0, ha='left', va='bottom', color='#555555')
 
-# Annotations — black arrows, positioned above lines
-ax.annotate(f'Best: 63.29%', xy=(17, 63.29), xytext=(17, 68),
-            fontsize=7, color='black', ha='center', fontweight='bold',
+# Annotations — all arrows removed, replaced with cleaner annotations
+ax.annotate(f'Best: 63.29%', xy=(27, 63.29), xytext=(27, 69),
+            fontsize=7.5, color='black', ha='center', fontweight='bold',
             arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
-ax.annotate(f'Best: 60.36%', xy=(18, 60.36), xytext=(18, 55),
-            fontsize=7, color='black', ha='center', fontweight='bold',
-            arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
-ax.annotate('Stuck at 10%\n(random guess)', xy=(20, 10), xytext=(20, 18),
-            fontsize=7, color='black', ha='center', fontweight='bold',
+ax.annotate(f'59.60%', xy=(27, 59.60), xytext=(27, 52),
+            fontsize=7.5, color='black', ha='center', fontweight='bold',
             arrowprops=dict(arrowstyle='->', color='black', lw=0.8))
 
 ax.set_xlabel('Federated Learning Round')
@@ -96,7 +93,7 @@ ax.xaxis.set_major_locator(mticker.MultipleLocator(5))
 ax.yaxis.set_major_locator(mticker.MultipleLocator(10))
 # Explicit ticks: 1 (edge) → 5,6 (attack) → 10,15,20,25,30 (edge)
 ax.set_xticks([1, 5, 6, 10, 15, 20, 25, 30])
-ax.legend(loc='center right', bbox_to_anchor=(0.98, 0.55), frameon=False, fontsize=7.5)
+ax.legend(loc='lower left', frameon=False, fontsize=7.5)
 
 plt.tight_layout(pad=0.5)
 fig.savefig(f'{OUT}/fig1_four_scenarios.png', dpi=300, bbox_inches='tight')
